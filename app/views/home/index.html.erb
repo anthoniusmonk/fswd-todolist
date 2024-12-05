@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>To Do List</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <%= csrf_meta_tags %>
+  <%= csp_meta_tag %>
+
+  <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+</head>
+
+<body>
+  <div class="container">
+    <h1>To Do List</h1>
+
+    <!-- Task List -->
+    <ul id="task-list">
+      <!-- Tasks will be dynamically inserted here -->
+    </ul>
+
+    <!-- Add Task Form -->
+    <form id="add-task-form">
+      <input type="text" id="new-task-content" placeholder="New Task" required />
+      <button type="submit">Add Task</button>
+    </form>
+
+    <!-- Bonus Feature: Task Filters -->
+    <div id="filters">
+      <button data-filter="all">All</button>
+      <button data-filter="active">Active</button>
+      <button data-filter="complete">Complete</button>
+    </div>
+  </div>
+</body>
+</html>

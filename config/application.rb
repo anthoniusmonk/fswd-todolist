@@ -9,6 +9,7 @@ Bundler.require(*Rails.groups)
 module FswdTodolist
   class Application < Rails::Application
     # Initialize configuration defaults for originally generated Rails version.
+    config.api_only = false
     config.load_defaults 6.1
 
     # Configuration for the application, engines, and railties goes here.

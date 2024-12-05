@@ -15,7 +15,7 @@ gem 'webpacker', '~> 5.0'
 # gem 'uglifier', '~> 4.2.0'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'mini_racer', platforms: :ruby
-
+gem 'turbolinks', '~> 5'
 # Use jquery as the JavaScript library
 # gem 'jquery-rails', '~> 4.4'
 # Use CoffeeScript for .coffee assets and views
@@ -65,6 +65,8 @@ group :development do
   # Access an interactive console on exception pages or by calling 'console' anywhere in the code.
   gem 'listen', '~> 3.7.1'
   gem 'web-console', '>= 4.2'
+
+  gem 'rack-mini-profiler', '~> 2.0'
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring', '< 3.0'
   gem 'spring-watcher-listen', '~> 2.0.1'
@@ -73,7 +75,18 @@ group :development do
   gem 'sqlite3', '~> 1.4'
 end
 
+group :test do
+  # Adds support for Capybara system testing and selenium driver
+  gem 'capybara', '>= 3.26'
+  gem 'selenium-webdriver', '>= 4.0.0.rc1'
+  # Easy installation and use of web drivers to run system tests with browsers
+  gem 'webdrivers'
+end
+
 group :production do
   # Use pg as the database for Active Record
   gem 'pg', '~> 1.4.3'
 end
+
+# Windows does not include zoneinfo files, so bundle the tzinfo-data gem
+gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]

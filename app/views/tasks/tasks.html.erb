@@ -1,0 +1,21 @@
+<body>
+  <div class="container">
+    <h1>To Do List</h1>
+    <ul id="task-list"></ul>
+
+    <!-- Add Task Form -->
+    <form id="add-task-form">
+      <input type="text" id="new-task-content" placeholder="New Task" required />
+      <button type="submit">Add Task</button>
+    </form>
+
+    <!-- Bonus Feature: Toggle Buttons -->
+    <div id="filters">
+      <button data-filter="all">All</button>
+      <button data-filter="active">Active</button>
+      <button data-filter="complete">Complete</button>
+    </div>
+  </div>
+
+  <%= javascript_pack_tag 'application' %>
+</body>
