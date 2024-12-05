@@ -3,6 +3,7 @@
   "private": true,
   "engines" : { 
     "node" : "^16.17"
+    "yarn": "1.22.22"
   },
   "dependencies": {
     "@rails/actioncable": "^6.0.0",
