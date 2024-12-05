@@ -25,3 +25,5 @@ production:
   <<: *default
   adapter: postgresql
   database: to_do_list_fs
+  production:
+  url: <%= ENV['DATABASE_URL'] %>

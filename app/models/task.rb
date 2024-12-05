@@ -1,9 +1,9 @@
 class Task < ApplicationRecord
-  belongs_to :user
+  belongs_to :user, optional: true
 
   # Validations
   validates :content, presence: true
-  validates :due, presence: true
+  validates :user, presence: true
 
   # Optional: Scope to filter completed tasks
   scope :completed, -> { where(complete: true) }
